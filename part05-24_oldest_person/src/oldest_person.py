@@ -1,11 +1,12 @@
 # Write your solution here
 def oldest_person(people: list):
-    year = people[1][1]
+    year = people[0][1]
+    name = people[0][0]
     for i in people:
         if year > i[1]:
             year = i[1]
-    
-    return 
+            name = i[0]
+    return name
 
 if __name__ == "__main__":
     p1 = ("Adam", 1977)
@@ -13,4 +14,6 @@ if __name__ == "__main__":
     p3 = ("Mary", 1953)
     p4 = ("Ernest", 1997)
     people = [p1, p2, p3, p4]
-    print(oldest_person(people))
+    people_list = [('Emily', 2014), ('Arthur', 1977)]
+
+    print(oldest_person(people_list))
